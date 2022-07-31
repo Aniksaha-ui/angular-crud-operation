@@ -1,0 +1,24 @@
+<form [formGroup]="todoForm">
+  <p>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput placeholder="Enter Title" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Leave a comment</mat-label>
+      <textarea
+        formControlName="description"
+        matInput
+        placeholder="Enter Todo Description"
+      ></textarea>
+    </mat-form-field>
+  </p>
+
+  <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>close</button
+    >&nbsp;&nbsp;
+    <button mat-raised-button color="primary" (click)="addTodo()">save</button>
+  </div>
+</form>
