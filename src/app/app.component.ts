@@ -53,5 +53,9 @@ export class AppComponent implements OnInit {
     this.dialog.open(ModalComponent);
   }
 
-  editTodo() {}
+  editTodo(row: any) {
+    this.dialog.open(ModalComponent, {
+      data: row,
+    });
+  }
 }

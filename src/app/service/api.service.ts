@@ -14,4 +14,9 @@ export class ApiService {
   postTodo(data) {
     return this.http.post<any>('http://localhost:4000/todo', data);
   }
+
+  //update todo
+  putTodo(data: any, id: any) {
+    return this.http.put<any>('http://localhost:4000/todo/' + id, data);
+  }
 }

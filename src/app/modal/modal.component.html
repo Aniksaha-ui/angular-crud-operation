@@ -19,6 +19,8 @@
   <div mat-dialog-action [align]="'end'">
     <button mat-raised-button color="warn" mat-dialog-close>close</button
     >&nbsp;&nbsp;
-    <button mat-raised-button color="primary" (click)="addTodo()">save</button>
+    <button mat-raised-button color="primary" (click)="addTodo()">
+      {{ actionButton }}
+    </button>
   </div>
 </form>
